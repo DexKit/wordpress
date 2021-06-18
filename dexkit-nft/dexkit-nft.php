@@ -15,15 +15,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-
 define( 'NFT_TAG', 'dexkit_nft' );
 define( 'NFT_CRON', 'cron_dexkit_nft' );
 define( 'NFT_VERSION', '0.1.0' );
-define( 'NFT_API', 'https://' );
+define( 'NFT_API', 'https://query.dexkit.com');
 define( 'NFT_EXPIRE_DAYS', 7 );
 define( 'NFT_BUILD', plugin_dir_url( __FILE__ ) . 'build/' );
 define( 'NFT_MANIFEST', NFT_BUILD . 'asset-manifest.json' );
-
 
 // register hooks
 register_activation_hook( __FILE__, array( DexkitNFT::get_instance(), 'activate' ) );
@@ -116,8 +114,8 @@ class DexkitNFT
 
 		// remove database
 		$table_name = $wpdb->prefix . NFT_TAG;
-    $sql = "DROP TABLE IF EXISTS $table_name";
-    $wpdb->query($sql);
+		$sql = "DROP TABLE IF EXISTS $table_name";
+		$wpdb->query($sql);
 
 		// remove cronjob
 		$timestamp = wp_next_scheduled( NFT_CRON );
@@ -131,19 +129,24 @@ class DexkitNFT
 	 */
 	private function get_config_from_api()
 	{
-		// global $wpdb;
+		//global $wpdb;
 
-		// $result = $wpdb->get_results( "SELECT * FROM " . $wpdb->prefix . NFT_TAG . " WHERE id = 1", OBJECT );
+		//$result = $wpdb->get_results( "SELECT * FROM " . $wpdb->prefix . NFT_TAG . " WHERE id = 1", OBJECT );
 
-		// $request = wp_remote_get( NFT_API . '/' . $result[0]->api );
+		$domain = get_site_url();
+    	$domain = preg_replace( "#^[^:/.]*[:/]+#i", "", $domain);
 
-		// if( is_wp_error( $request ) ) {
-		// 	return false; // Bail early
-		// }
+		///v4/config-wordpress?domain=dexkit.local&type=('DEX' ||  'AGGREGATOR' ||  'MARKETPLACE')
+		$request = wp_remote_get( NFT_API . '/v4/config-wordpress?domain='.$domain.'&type=MARKETPLACE' );
+		
+		if( is_wp_error( $request ) ) {
+		 	return false; // Bail early
+		}
 
-		// $body = wp_remote_retrieve_body( $request );
-		// return json_encode( $body );
-		return json_decode( '{ "active": true, "config": { "id": 123 } }' );
+		$body = wp_remote_retrieve_body( $request );
+
+		return json_decode( $body );
+		//return json_decode( '{ "active": true, "config": { "id": 123 } }' );
 	}
 
 
@@ -259,12 +262,14 @@ class DexkitNFT
 				echo '<div id="' . $a['selector'] . '" style="width: 100%; height: 100%;"></div>';		
 			}
 
-			$relayData['config'] = "{\"theme\":{\"general\":{\"title\":\"MARKETPLACE\"},\"componentsTheme\":{\"background\":\"#F4F7FE\",\"backgroundERC721\":\"#F4F7FE\"}}}"; // $localConfig->config
-			$relayData['owner'] = '';
-			$relayData['signature'] = '';
-			$relayData['message'] = '';
-			$relayData['slug'] = '';
-			$relayData['createdAt'] = '';
+			//$relayData['config'] = "{\"theme\":{\"general\":{\"title\":\"MARKETPLACE\"},\"componentsTheme\":{\"background\":\"#F4F7FE\",\"backgroundERC721\":\"#F4F7FE\"}}}"; 
+			// $localConfig->config
+			$relayData['config'] = json_decode($localConfig->config);
+			$relayData['owner'] = $localConfig->owner;
+			$relayData['signature'] = $localConfig->signature;
+			$relayData['message'] = $localConfig->message;
+			$relayData['slug'] = $localConfig->slug;
+			$relayData['createdAt'] = $localConfig->createdAt;
 
 			wp_localize_script( 'react-plugin-0', 'dexkit_marketplace', array(
 				'selector' => '#' . $a['selector'],
@@ -278,7 +283,8 @@ class DexkitNFT
 	/**
 	 * 
 	 */
-	public function load_app() {
+	public function load_app()
+	{
     $assets_files = $this->get_assets( NFT_MANIFEST );
 
     $js_files   = array_filter( $assets_files,  fn($file_string) => pathinfo( $file_string, PATHINFO_EXTENSION ) === 'js');
@@ -297,7 +303,7 @@ class DexkitNFT
 	/**
 	 * 
 	 */
-  private function get_assets()
+    private function get_assets()
 	{
 		// Request manifest file.
 		$request = file_get_contents( NFT_MANIFEST );
@@ -317,7 +323,6 @@ class DexkitNFT
 
 		return $files_data->entrypoints;
   }
-
 
 	/**
 	 * ADD MENU
@@ -354,7 +359,9 @@ class DexkitNFT
 			
 			<h2>Dexkit NFT</h2>
 			<p style="text-align:justify">DEXKIT is changing the game of decentralized trading. The next-generation DeFi toolkit contains a full-suite decentralized exchange (DEX) that leverages powerful 0x (ZRX) technology allowing for multiple order types including ZERO GAS FEE placement of stop and limit orders. The exchange is powered by the underlying DEXSwap aggregator which gathers information from over 14 exchanges in search of the best price and liquidity for tokens. Collectors can launch their own customizable NFT marketplace where they can exchange crypto art, in-game assets, and any other ERC721 or 1155 token. The DEXKIT dashboard is the main control room where users can monitor statistics from all over the crypto markets, customize deployed DEXKIT tools, and perform swaps within the onboard multicurrency wallet.</p>
+			<p style="text-align:justify">In order to costumize this plugin you need to use the Dashboard Wizard, this plugin then updates based in your domain when you click on sync.</p>
 			<p><a href="https://dexkit.com">https://dexkit.com</a></p>
+			<p><a href="https://t.me/dexkit">Telegram</a></p>
 
 
 			<?php if ( $localConfig->api != NULL ) { ?>
@@ -374,32 +381,6 @@ class DexkitNFT
 				</table>
 			</form>
 			<?php } ?>
-			
-			<hr>
-
-			<h3>Settings</h3>
-			<form method="POST">
-				<?php wp_nonce_field( NFT_TAG . '_api', NFT_TAG . '_form_api' ); ?>
-				<input type="hidden" name="updated" value="true">
-
-				<?php if ( $localConfig->expire_date != NULL && strtotime( current_time( 'mysql' ) ) > strtotime( $localConfig->expire_date ) ) { ?>
-					<div style="color: red"><label>Your key has expired in <?php echo human_time_diff(strtotime( $localConfig->expire_date ), strtotime( current_time( 'mysql' ) ) ); ?> ago</div>
-				<?php } else if ( $localConfig->expire_date != NULL ) { ?>
-					<div style="color: red"><label>Your API Key will expire in <?php echo human_time_diff( strtotime( current_time( 'mysql' ) ), strtotime( $localConfig->expire_date ) ); ?></div>
-				<?php } ?>
-
-				<table class="form-table">
-					<tbody>
-						<tr>
-							<th><label for="api">API Key</label></th>
-							<td><input name="api" id="api" type="text" value="<?php echo $localConfig->api ?>" class="regular-text" /></td>
-						</tr>
-					</tbody>
-				</table>
-				<p class="submit">
-					<input type="submit" name="submit" id="submit" class="button button-primary" value="Save">
-				</p>
-			</form>
 			
 		</div> 
 <?php
