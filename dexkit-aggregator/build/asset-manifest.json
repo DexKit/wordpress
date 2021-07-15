@@ -1,30 +1,19 @@
 {
   "files": {
     "static/js/0.caff900b.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/0.caff900b.chunk.js",
-    "static/js/0.caff900b.chunk.js.map": "/wp-content/plugins/dexkit-aggregator/build/static/js/0.caff900b.chunk.js.map",
     "static/js/1.1d8e13fe.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/1.1d8e13fe.chunk.js",
-    "static/js/1.1d8e13fe.chunk.js.map": "/wp-content/plugins/dexkit-aggregator/build/static/js/1.1d8e13fe.chunk.js.map",
-    "main.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/main.16c17404.chunk.js",
-    "main.js.map": "/wp-content/plugins/dexkit-aggregator/build/static/js/main.16c17404.chunk.js.map",
+    "main.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/main.87516be2.chunk.js",
     "runtime-main.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/runtime-main.f8e30537.js",
-    "runtime-main.js.map": "/wp-content/plugins/dexkit-aggregator/build/static/js/runtime-main.f8e30537.js.map",
-    "static/css/4.f1934844.chunk.css": "/wp-content/plugins/dexkit-aggregator/build/static/css/4.f1934844.chunk.css",
+    "static/css/4.ad2844e3.chunk.css": "/wp-content/plugins/dexkit-aggregator/build/static/css/4.ad2844e3.chunk.css",
     "static/js/4.5d8c6eaa.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/4.5d8c6eaa.chunk.js",
-    "static/js/4.5d8c6eaa.chunk.js.map": "/wp-content/plugins/dexkit-aggregator/build/static/js/4.5d8c6eaa.chunk.js.map",
     "static/js/5.dba4a284.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/5.dba4a284.chunk.js",
-    "static/js/5.dba4a284.chunk.js.map": "/wp-content/plugins/dexkit-aggregator/build/static/js/5.dba4a284.chunk.js.map",
     "static/js/6.53de632a.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/6.53de632a.chunk.js",
-    "static/js/6.53de632a.chunk.js.map": "/wp-content/plugins/dexkit-aggregator/build/static/js/6.53de632a.chunk.js.map",
     "static/js/7.f4af0a2e.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/7.f4af0a2e.chunk.js",
-    "static/js/7.f4af0a2e.chunk.js.map": "/wp-content/plugins/dexkit-aggregator/build/static/js/7.f4af0a2e.chunk.js.map",
     "static/js/8.41966346.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/8.41966346.chunk.js",
-    "static/js/8.41966346.chunk.js.map": "/wp-content/plugins/dexkit-aggregator/build/static/js/8.41966346.chunk.js.map",
     "static/js/9.7d600522.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/9.7d600522.chunk.js",
-    "static/js/9.7d600522.chunk.js.map": "/wp-content/plugins/dexkit-aggregator/build/static/js/9.7d600522.chunk.js.map",
     "index.html": "/wp-content/plugins/dexkit-aggregator/build/index.html",
-    "precache-manifest.6208f6aaadebbfe9d8a20c711f976287.js": "/wp-content/plugins/dexkit-aggregator/build/precache-manifest.6208f6aaadebbfe9d8a20c711f976287.js",
+    "precache-manifest.a618d459ab11b863cea3129172b0da6f.js": "/wp-content/plugins/dexkit-aggregator/build/precache-manifest.a618d459ab11b863cea3129172b0da6f.js",
     "service-worker.js": "/wp-content/plugins/dexkit-aggregator/build/service-worker.js",
-    "static/css/4.f1934844.chunk.css.map": "/wp-content/plugins/dexkit-aggregator/build/static/css/4.f1934844.chunk.css.map",
     "static/js/4.5d8c6eaa.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/4.5d8c6eaa.chunk.js.LICENSE.txt",
     "static/js/5.dba4a284.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/5.dba4a284.chunk.js.LICENSE.txt",
     "static/js/6.53de632a.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/6.53de632a.chunk.js.LICENSE.txt",
@@ -61,8 +50,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f8e30537.js",
-    "static/css/4.f1934844.chunk.css",
+    "static/css/4.ad2844e3.chunk.css",
     "static/js/4.5d8c6eaa.chunk.js",
-    "static/js/main.16c17404.chunk.js"
+    "static/js/main.87516be2.chunk.js"
   ]
 }
