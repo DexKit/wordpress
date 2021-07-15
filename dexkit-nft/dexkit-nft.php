@@ -1,19 +1,21 @@
 <?php
 /**
  * Plugin Name:     Dexkit NFT
- * Plugin URI:      https://dexkit.com
  * Description:     DEXKIT PLUGIN
  * Author:          Dexkit NFT
  * Author URI:      https://dexkit.com
  * Text Domain:     dexkit-nft
  * Domain Path:     /languages
- * Version:         0.1.0
+ * Version:         0.1.1
  *
  * @package         Dexkit-NFT
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+// Load here functions that loads template
+require __DIR__ . '/functions.php';
+add_action( 'plugins_loaded', 'dexkit_nft_bootstrap' );
 
 define( 'NFT_TAG', 'dexkit_nft' );
 define( 'NFT_CRON', 'cron_dexkit_nft' );
@@ -29,13 +31,13 @@ register_deactivation_hook( __FILE__, array( DexkitNFT::get_instance(), 'deactiv
 
 // register actions
 // add_action( 'plugins_loaded', array( DexkitNFT::get_instance(), 'get_instance' ) );
-add_action( 'init', 'wpdocs_add_custom_shortcode' );
+add_action( 'init', 'wpdocs_add_nft_custom_shortcode' );
 add_action( NFT_CRON , array( DexkitNFT::get_instance(), 'fetch'));
 add_action( 'admin_menu', array( DexkitNFT::get_instance(), 'create_plugin_settings_page' ) );
 add_action( 'wp_enqueue_scripts', array(DexkitNFT::get_instance(), 'load_app'), 45000 );
  
 // register shortcodes
-function wpdocs_add_custom_shortcode() {
+function wpdocs_add_nft_custom_shortcode() {
 	add_shortcode( NFT_TAG, array( DexkitNFT::get_instance(), 'get_shortcode' ) );
 }
 
@@ -208,7 +210,6 @@ class DexkitNFT
 		);
 	}
 
-
 	/**
 	 * 
 	 */
@@ -240,30 +241,35 @@ class DexkitNFT
 		$this->set_verify();
 	}
 
-
 	/**
 	 * 
 	 */
 	public function get_shortcode($params) {
 
 		$localConfig = $this->get_config();
+		$a = shortcode_atts([
+			'height'=> '800px',
+			'width' => '100%',
+			'nft_creator'=> '',
+		], 
+		$params);
+		$agg = '<style>
+							.dexkit-marketplace-widget-iframe {
+								height: '.$a['height'].';
+								width: '.$a['width'].';
+								border: 0;
+							}
+							</style>';
+		$agg .= '<iframe name="dexkit-marketplace" src="' . esc_url( NFT_BUILD ) . '" class="dexkit-marketplace-widget-iframe"></iframe>';
 
 		if (
 			$localConfig->expire_date != NULL &&
 			strtotime( current_time( 'mysql' ) ) > strtotime( $localConfig->expire_date )
 		) {
-			echo 'marketplace expired';
+			
 		}
 		else {
-			$a = shortcode_atts(['block' => 'false', 'selector' => 'page'], $params);
-	
-			if ( $a['block'] == "true") {
-				// Variables for app use - These variables will be available in window.rpReactPlugin variable.
-				echo '<div id="' . $a['selector'] . '" style="width: 100%; height: 100%;"></div>';		
-			}
-
-			//$relayData['config'] = "{\"theme\":{\"general\":{\"title\":\"MARKETPLACE\"},\"componentsTheme\":{\"background\":\"#F4F7FE\",\"backgroundERC721\":\"#F4F7FE\"}}}"; 
-			// $localConfig->config
+				
 			$relayData['config'] = json_decode($localConfig->config);
 			$relayData['owner'] = $localConfig->owner;
 			$relayData['signature'] = $localConfig->signature;
@@ -271,11 +277,14 @@ class DexkitNFT
 			$relayData['slug'] = $localConfig->slug;
 			$relayData['createdAt'] = $localConfig->createdAt;
 
-			wp_localize_script( 'react-plugin-0', 'dexkit_marketplace', array(
-				'selector' => '#' . $a['selector'],
-				'data' => $relayData
-			));
+			
 		}
+		wp_localize_script( 'setup-dexkit-nft-plugin', 'dexkit_marketplace', array(
+			'data' => $relayData,
+			'nft_creator' => $a['nft_creator']
+		));
+
+		return $agg;
 
 	}
 
@@ -291,12 +300,14 @@ class DexkitNFT
 		$css_files  = array_filter( $assets_files,  fn($file_string) => pathinfo( $file_string, PATHINFO_EXTENSION ) === 'css');
 
 		foreach ( $css_files as $index => $css_file ) {
-			wp_enqueue_style( 'react-plugin-' . $index, NFT_BUILD . $css_file );
+			wp_enqueue_style( 'react-plugin-nft' . $index, NFT_BUILD . $css_file );
 		}
 
 		foreach ( $js_files as $index => $js_file ) {
-			wp_enqueue_script( 'react-plugin-' . $index, NFT_BUILD . $js_file, array(), NFT_VERSION, true );
+			wp_enqueue_script( 'react-plugin-nft-' . $index, NFT_BUILD . $js_file, array(), NFT_VERSION, true );
 		}
+
+		wp_enqueue_script( 'setup-dexkit-nft-plugin', plugin_dir_url( __FILE__ ) . '/scripts/init.js', array(), NFT_VERSION, true );
   }
 
 
