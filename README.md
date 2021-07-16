@@ -11,7 +11,7 @@ DexKit offers whitelabel functionality being the current available:
 
 # How to install Aggregator plugin at Wordpress
 
-- Download [Plugin](dexkit-agg.zip)
+- Download [Plugin](dexkit-aggregator.zip)
 
 - Follow the [GUIDE](dexkit-aggregator/docs/INSTALL_AGGREGATOR.md)
 

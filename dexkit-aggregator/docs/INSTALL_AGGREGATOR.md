@@ -1,5 +1,8 @@
 # How to Install Aggregator Plugin
 
+[PLUGIN FILE](../../dexkit-aggregator.zip)
+
+
 1. Follow these instructions to increase the upload limit of your wordpress site:
 https://www.wpbeginner.com/wp-tutorials/how-to-fix-the-link-you-followed-has-expired-error-in-wordpress/
 
@@ -15,7 +18,7 @@ https://www.wpbeginner.com/wp-tutorials/how-to-fix-the-link-you-followed-has-exp
 
 ![Choose File](images/install-aggregator/install-agg-3.png "Choose File")
 
-5. After selecting the Dexkit plugin file (dexkit-aggregator.zip)
+5. After selecting the  [Dexkit plugin file](../../dexkit-aggregator.zip)
 Click "Install Now"
 
 ![Install Now](images/install-aggregator/install-agg-4.png "Install Now")

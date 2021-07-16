@@ -1,5 +1,7 @@
 # How to Install NFT Marketplace Plugin
 
+[PLUGIN FILE](../../dexkit-nft.zip)
+
 1. Follow these instructions to increase the upload limit of your wordpress site:
 https://www.wpbeginner.com/wp-tutorials/how-to-fix-the-link-you-followed-has-expired-error-in-wordpress/
 

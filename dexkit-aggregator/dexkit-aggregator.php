@@ -7,7 +7,6 @@
  * Text Domain:     dexkit-aggregator
  * Domain Path:     /languages
  * Version:         0.1.0
- *
  * @package         Dexkit-Aggregator
  */
 if ( ! defined( 'ABSPATH' ) ) {
