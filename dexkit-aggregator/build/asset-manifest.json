@@ -1,23 +1,22 @@
 {
   "files": {
-    "static/js/0.caff900b.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/0.caff900b.chunk.js",
-    "static/js/1.1d8e13fe.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/1.1d8e13fe.chunk.js",
-    "main.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/main.87516be2.chunk.js",
-    "runtime-main.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/runtime-main.f8e30537.js",
-    "static/css/4.ad2844e3.chunk.css": "/wp-content/plugins/dexkit-aggregator/build/static/css/4.ad2844e3.chunk.css",
-    "static/js/4.5d8c6eaa.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/4.5d8c6eaa.chunk.js",
-    "static/js/5.dba4a284.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/5.dba4a284.chunk.js",
-    "static/js/6.53de632a.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/6.53de632a.chunk.js",
-    "static/js/7.f4af0a2e.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/7.f4af0a2e.chunk.js",
-    "static/js/8.41966346.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/8.41966346.chunk.js",
-    "static/js/9.7d600522.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/9.7d600522.chunk.js",
+    "static/js/0.93f72ac3.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/0.93f72ac3.chunk.js",
+    "main.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/main.2d11f16f.chunk.js",
+    "runtime-main.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/runtime-main.2f20865e.js",
+    "static/css/3.ad2844e3.chunk.css": "/wp-content/plugins/dexkit-aggregator/build/static/css/3.ad2844e3.chunk.css",
+    "static/js/3.c8a40748.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/3.c8a40748.chunk.js",
+    "static/js/4.b75c797c.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/4.b75c797c.chunk.js",
+    "static/js/5.6b9233e6.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/5.6b9233e6.chunk.js",
+    "static/js/6.cf907883.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/6.cf907883.chunk.js",
+    "static/js/7.43f24370.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/7.43f24370.chunk.js",
+    "static/js/8.8fc758e5.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/8.8fc758e5.chunk.js",
     "index.html": "/wp-content/plugins/dexkit-aggregator/build/index.html",
-    "precache-manifest.a618d459ab11b863cea3129172b0da6f.js": "/wp-content/plugins/dexkit-aggregator/build/precache-manifest.a618d459ab11b863cea3129172b0da6f.js",
+    "precache-manifest.4ced7ace552f905f03af51120e7b334a.js": "/wp-content/plugins/dexkit-aggregator/build/precache-manifest.4ced7ace552f905f03af51120e7b334a.js",
     "service-worker.js": "/wp-content/plugins/dexkit-aggregator/build/service-worker.js",
-    "static/js/4.5d8c6eaa.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/4.5d8c6eaa.chunk.js.LICENSE.txt",
-    "static/js/5.dba4a284.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/5.dba4a284.chunk.js.LICENSE.txt",
-    "static/js/6.53de632a.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/6.53de632a.chunk.js.LICENSE.txt",
-    "static/js/9.7d600522.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/9.7d600522.chunk.js.LICENSE.txt",
+    "static/js/3.c8a40748.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/3.c8a40748.chunk.js.LICENSE.txt",
+    "static/js/4.b75c797c.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/4.b75c797c.chunk.js.LICENSE.txt",
+    "static/js/5.6b9233e6.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/5.6b9233e6.chunk.js.LICENSE.txt",
+    "static/js/7.43f24370.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/7.43f24370.chunk.js.LICENSE.txt",
     "static/media/inter.css": "/wp-content/plugins/dexkit-aggregator/build/static/media/Inter.var.4b976905.woff2",
     "static/media/arrow-down-blue.svg": "/wp-content/plugins/dexkit-aggregator/build/static/media/arrow-down-blue.114fab91.svg",
     "static/media/arrow-down-grey.svg": "/wp-content/plugins/dexkit-aggregator/build/static/media/arrow-down-grey.4d4a6a99.svg",
@@ -49,9 +48,9 @@
     "static/media/x.svg": "/wp-content/plugins/dexkit-aggregator/build/static/media/x.5b8e2186.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f8e30537.js",
-    "static/css/4.ad2844e3.chunk.css",
-    "static/js/4.5d8c6eaa.chunk.js",
-    "static/js/main.87516be2.chunk.js"
+    "static/js/runtime-main.2f20865e.js",
+    "static/css/3.ad2844e3.chunk.css",
+    "static/js/3.c8a40748.chunk.js",
+    "static/js/main.2d11f16f.chunk.js"
   ]
 }

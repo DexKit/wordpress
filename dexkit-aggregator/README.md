@@ -1,6 +1,6 @@
 # DexKit Aggregator Plugin
 
-## Current Plugin Version: 0.1.0 ##
+## Current Plugin Version: 0.1.1 ##
 
 
 DexKit offers whitelabel functionality being the current available:
@@ -27,4 +27,4 @@ DexKit offers whitelabel functionality being the current available:
 
 # Changelog
 
-[NFT Changelog](NFT_CHANGELOG.md)
+[Aggregator Changelog](docs/AGGREGATOR_CHANGELOG.md)
