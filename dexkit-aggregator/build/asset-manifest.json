@@ -1,7 +1,7 @@
 {
   "files": {
     "static/js/0.93f72ac3.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/0.93f72ac3.chunk.js",
-    "main.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/main.2d11f16f.chunk.js",
+    "main.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/main.7551ffb3.chunk.js",
     "runtime-main.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/runtime-main.2f20865e.js",
     "static/css/3.ad2844e3.chunk.css": "/wp-content/plugins/dexkit-aggregator/build/static/css/3.ad2844e3.chunk.css",
     "static/js/3.c8a40748.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/3.c8a40748.chunk.js",
@@ -11,7 +11,7 @@
     "static/js/7.43f24370.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/7.43f24370.chunk.js",
     "static/js/8.8fc758e5.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/8.8fc758e5.chunk.js",
     "index.html": "/wp-content/plugins/dexkit-aggregator/build/index.html",
-    "precache-manifest.4ced7ace552f905f03af51120e7b334a.js": "/wp-content/plugins/dexkit-aggregator/build/precache-manifest.4ced7ace552f905f03af51120e7b334a.js",
+    "precache-manifest.a87ecacf1525d8ee6496e3163e1f0990.js": "/wp-content/plugins/dexkit-aggregator/build/precache-manifest.a87ecacf1525d8ee6496e3163e1f0990.js",
     "service-worker.js": "/wp-content/plugins/dexkit-aggregator/build/service-worker.js",
     "static/js/3.c8a40748.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/3.c8a40748.chunk.js.LICENSE.txt",
     "static/js/4.b75c797c.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/4.b75c797c.chunk.js.LICENSE.txt",
@@ -51,6 +51,6 @@
     "static/js/runtime-main.2f20865e.js",
     "static/css/3.ad2844e3.chunk.css",
     "static/js/3.c8a40748.chunk.js",
-    "static/js/main.2d11f16f.chunk.js"
+    "static/js/main.7551ffb3.chunk.js"
   ]
 }

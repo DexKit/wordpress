@@ -6,7 +6,7 @@
  * Author URI:      https://dexkit.com
  * Text Domain:     dexkit-aggregator
  * Domain Path:     /languages
- * Version:         0.1.1
+ * Version:         0.1.2
  * @package         Dexkit-Aggregator
  */
 if ( ! defined( 'ABSPATH' ) ) {
@@ -19,7 +19,7 @@ add_action( 'plugins_loaded', 'dexkit_aggregator_bootstrap' );
 
 define( 'AGGREGATOR_TAG', 'dexkit_aggregator' );
 define( 'AGGREGATOR_CRON', 'cron_dexkit_aggregator' );
-define( 'AGGREGATOR_VERSION', '0.1.1' );
+define( 'AGGREGATOR_VERSION', '0.1.2' );
 define( 'AGGREGATOR_API', 'https://query.dexkit.com');
 define( 'AGGREGATOR_EXPIRE_DAYS', 7 );
 define( 'AGGREGATOR_BUILD', plugin_dir_url( __FILE__ ) . 'build/' );
@@ -253,9 +253,9 @@ class DexkitAGGREGATOR
 			'affiliate' => '', 
 			'height'=> '800px',
 			'width' => '100%',
-			'default_token_eth' => '',
-			'default_token_bsc' => '',
-			'default_token_matic' => '',
+			'default_token_address_eth' => '',
+			'default_token_address_bsc' => '',
+			'default_token_address_matic' => '',
 			'brand_color'=> '',
 			'brand_color_dark' => '',
 			'logo' => '',
@@ -294,9 +294,9 @@ class DexkitAGGREGATOR
 		wp_localize_script( 'setup-dexkit-agg-plugin', 'dexkit_aggregator', array(
 			'data' => $relayData,
 			'affiliate'=> $a['affiliate'],
-			'default_token_eth' => $a['default_token_eth'],
-			'default_token_bsc' => $a['default_token_bsc'],
-			'default_token_matic' => $a['default_token_matic'],
+			'default_token_address_eth' => $a['default_token_address_eth'],
+			'default_token_address_bsc' => $a['default_token_address_bsc'],
+			'default_token_address_matic' => $a['default_token_address_matic'],
 			'brand_color' => $a['brand_color'],
 			'brand_color_dark' => $a['brand_color_dark'],
 			'logo' => $a['logo'],
