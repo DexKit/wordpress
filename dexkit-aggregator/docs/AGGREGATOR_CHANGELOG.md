@@ -1,5 +1,9 @@
 CHANGELOG
 
+## v0.1.3 - _September 28, 2021_
+
+    * Fixes in plugin logic
+
 ## v0.1.2 - _September 2, 2021_
 
     * Fixes in plugin logic

@@ -19,7 +19,7 @@ add_action( 'plugins_loaded', 'dexkit_nft_bootstrap' );
 
 define( 'NFT_TAG', 'dexkit_nft' );
 define( 'NFT_CRON', 'cron_dexkit_nft' );
-define( 'NFT_VERSION', '0.1.0' );
+define( 'NFT_VERSION', '0.1.1' );
 define( 'NFT_API', 'https://query.dexkit.com');
 define( 'NFT_EXPIRE_DAYS', 7 );
 define( 'NFT_BUILD', plugin_dir_url( __FILE__ ) . 'build/' );
@@ -294,18 +294,19 @@ class DexkitNFT
 	 */
 	public function load_app()
 	{
-    $assets_files = $this->get_assets( NFT_MANIFEST );
+  	  /*	$assets_files = $this->get_assets( NFT_MANIFEST );
 
-    $js_files   = array_filter( $assets_files,  fn($file_string) => pathinfo( $file_string, PATHINFO_EXTENSION ) === 'js');
-		$css_files  = array_filter( $assets_files,  fn($file_string) => pathinfo( $file_string, PATHINFO_EXTENSION ) === 'css');
+			$js_files   = array_filter( $assets_files,  fn($file_string) => pathinfo( $file_string, PATHINFO_EXTENSION ) === 'js');
+			$css_files  = array_filter( $assets_files,  fn($file_string) => pathinfo( $file_string, PATHINFO_EXTENSION ) === 'css');
 
-		foreach ( $css_files as $index => $css_file ) {
-			wp_enqueue_style( 'react-plugin-nft' . $index, NFT_BUILD . $css_file );
-		}
+			foreach ( $css_files as $index => $css_file ) {
+				wp_enqueue_style( 'react-plugin-nft' . $index, NFT_BUILD . $css_file );
+			}
 
-		foreach ( $js_files as $index => $js_file ) {
-			wp_enqueue_script( 'react-plugin-nft-' . $index, NFT_BUILD . $js_file, array(), NFT_VERSION, true );
-		}
+			foreach ( $js_files as $index => $js_file ) {
+				wp_enqueue_script( 'react-plugin-nft-' . $index, NFT_BUILD . $js_file, array(), NFT_VERSION, true );
+			}
+		*/
 
 		wp_enqueue_script( 'setup-dexkit-nft-plugin', plugin_dir_url( __FILE__ ) . '/scripts/init.js', array(), NFT_VERSION, true );
   }

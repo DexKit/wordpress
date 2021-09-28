@@ -316,7 +316,7 @@ class DexkitAGGREGATOR
 	 */
 	public function load_app()
 	{
-   		$assets_files = $this->get_assets( AGGREGATOR_MANIFEST );
+   		/*$assets_files = $this->get_assets( AGGREGATOR_MANIFEST );
 
    		$js_files   = array_filter( $assets_files,  fn($file_string) => pathinfo( $file_string, PATHINFO_EXTENSION ) === 'js');
 		$css_files  = array_filter( $assets_files,  fn($file_string) => pathinfo( $file_string, PATHINFO_EXTENSION ) === 'css');
@@ -327,7 +327,7 @@ class DexkitAGGREGATOR
 
 		foreach ( $js_files as $index => $js_file ) {
 			wp_enqueue_script( 'react-agg-plugin-' . $index, AGGREGATOR_BUILD . $js_file, array(), AGGREGATOR_VERSION, true );
-		}
+		}*/
 
 		wp_enqueue_script( 'setup-dexkit-agg-plugin', plugin_dir_url( __FILE__ ) . '/scripts/init.js', array(), AGGREGATOR_VERSION, true );
   }
