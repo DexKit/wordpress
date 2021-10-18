@@ -1,5 +1,10 @@
 CHANGELOG
 
+## v0.1.4 - _October 17, 2021_
+
+    * Added Avalanche network, added affiliate
+
+
 ## v0.1.3 - _September 28, 2021_
 
     * Fixes in plugin logic

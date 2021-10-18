@@ -1,22 +1,21 @@
 {
   "files": {
-    "static/js/0.93f72ac3.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/0.93f72ac3.chunk.js",
-    "main.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/main.7551ffb3.chunk.js",
-    "runtime-main.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/runtime-main.2f20865e.js",
+    "static/js/0.d8278cb6.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/0.d8278cb6.chunk.js",
+    "main.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/main.8780808e.chunk.js",
+    "runtime-main.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/runtime-main.1dd1da6d.js",
     "static/css/3.ad2844e3.chunk.css": "/wp-content/plugins/dexkit-aggregator/build/static/css/3.ad2844e3.chunk.css",
-    "static/js/3.c8a40748.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/3.c8a40748.chunk.js",
-    "static/js/4.b75c797c.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/4.b75c797c.chunk.js",
-    "static/js/5.6b9233e6.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/5.6b9233e6.chunk.js",
-    "static/js/6.cf907883.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/6.cf907883.chunk.js",
-    "static/js/7.43f24370.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/7.43f24370.chunk.js",
-    "static/js/8.8fc758e5.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/8.8fc758e5.chunk.js",
+    "static/js/3.63498f42.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/3.63498f42.chunk.js",
+    "static/js/4.314b086a.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/4.314b086a.chunk.js",
+    "static/js/5.e98c2517.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/5.e98c2517.chunk.js",
+    "static/js/6.68017f30.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/6.68017f30.chunk.js",
+    "static/js/7.9ac8be5b.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/7.9ac8be5b.chunk.js",
+    "static/js/8.15b3d450.chunk.js": "/wp-content/plugins/dexkit-aggregator/build/static/js/8.15b3d450.chunk.js",
     "index.html": "/wp-content/plugins/dexkit-aggregator/build/index.html",
-    "precache-manifest.a87ecacf1525d8ee6496e3163e1f0990.js": "/wp-content/plugins/dexkit-aggregator/build/precache-manifest.a87ecacf1525d8ee6496e3163e1f0990.js",
+    "precache-manifest.1ca9f7979363f46f1f042a094886204e.js": "/wp-content/plugins/dexkit-aggregator/build/precache-manifest.1ca9f7979363f46f1f042a094886204e.js",
     "service-worker.js": "/wp-content/plugins/dexkit-aggregator/build/service-worker.js",
-    "static/js/3.c8a40748.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/3.c8a40748.chunk.js.LICENSE.txt",
-    "static/js/4.b75c797c.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/4.b75c797c.chunk.js.LICENSE.txt",
-    "static/js/5.6b9233e6.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/5.6b9233e6.chunk.js.LICENSE.txt",
-    "static/js/7.43f24370.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/7.43f24370.chunk.js.LICENSE.txt",
+    "static/js/3.63498f42.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/3.63498f42.chunk.js.LICENSE.txt",
+    "static/js/4.314b086a.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/4.314b086a.chunk.js.LICENSE.txt",
+    "static/js/6.68017f30.chunk.js.LICENSE.txt": "/wp-content/plugins/dexkit-aggregator/build/static/js/6.68017f30.chunk.js.LICENSE.txt",
     "static/media/inter.css": "/wp-content/plugins/dexkit-aggregator/build/static/media/Inter.var.4b976905.woff2",
     "static/media/arrow-down-blue.svg": "/wp-content/plugins/dexkit-aggregator/build/static/media/arrow-down-blue.114fab91.svg",
     "static/media/arrow-down-grey.svg": "/wp-content/plugins/dexkit-aggregator/build/static/media/arrow-down-grey.4d4a6a99.svg",
@@ -48,9 +47,9 @@
     "static/media/x.svg": "/wp-content/plugins/dexkit-aggregator/build/static/media/x.5b8e2186.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2f20865e.js",
+    "static/js/runtime-main.1dd1da6d.js",
     "static/css/3.ad2844e3.chunk.css",
-    "static/js/3.c8a40748.chunk.js",
-    "static/js/main.7551ffb3.chunk.js"
+    "static/js/3.63498f42.chunk.js",
+    "static/js/main.8780808e.chunk.js"
   ]
 }

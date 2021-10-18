@@ -45,6 +45,7 @@ Full shortcode options
 
 - logo - url to logo used in light mode
 - logo_dark - url to logo used in dark mode
+- affiliate - address where fees are routed if it holds over 500 KIT on the used network
 - brand_color - brand color used in light mode
 - brand_color_dark - brand color used in dark mode
 - is_dark_mode - default to dark mode
@@ -52,18 +53,20 @@ Full shortcode options
 - width - width size of the aggregator
 - matic_as_default - use Polygon as default network when open aggregator
 - bsc_as_default - use Binance Smart Chain as default network when open aggregator
+- avax_as_default - use Avalanche as default network when open aggregator
 - default_token_address_eth - Default token on ETH network
 - default_token_address_bsc - Default token on Binance Smart Chain network
 - default_token_address_matic - Default token on Polygon network
+- default_token_address_avax - Default token on Avalanche network
 - default_slippage - Default slippage of the aggregator, useful for tokens that need higher slippage to trade
 
 
 
 Full Example
 
-`[dexkit_aggregator height="800px" width="100%" logo="path_to_logo" logo_dark="path_to_logo" is_dark_mode="true" matic_as_default="false" bsc_as_default="false" default_token_address_eth="0x7866E48C74CbFB8183cd1a929cd9b95a7a5CB4F4" default_token_address_bsc="0x314593fa9a2fa16432913dbccc96104541d32d11" default_token_address_matic="0x4d0def42cf57d6f27cd4983042a55dce1c9f853c"  default_slippage="2" brand_color="#ff7149" brand_color_dark="#2172E5" ]`
+`[dexkit_aggregator affiliate="0x5bD68B4d6f90Bcc9F3a9456791c0Db5A43df676d" height="800px" width="100%" logo="path_to_logo" logo_dark="path_to_logo" is_dark_mode="true" matic_as_default="false" bsc_as_default="false" default_token_address_eth="0x7866E48C74CbFB8183cd1a929cd9b95a7a5CB4F4" default_token_address_bsc="0x314593fa9a2fa16432913dbccc96104541d32d11" default_token_address_matic="0x4d0def42cf57d6f27cd4983042a55dce1c9f853c"  default_slippage="2" brand_color="#ff7149" brand_color_dark="#2172E5" ]`
 
-If you need your aggregator as full page, you can select template as 
+If you need your aggregator as full page, you can select template as NOTE: SHORTCODE ATTRIBUTES DON'T WORK ON FULL PAGE
 ![Full Page](images/install-aggregator/install-agg-11.png "Full Page")
 
 
