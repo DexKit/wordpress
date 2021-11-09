@@ -1,6 +1,6 @@
 # DexKit Aggregator Plugin
 
-## Current Plugin Version: 0.1.3 ##
+## Current Plugin Version: 0.1.5 ##
 
 
 DexKit offers whitelabel functionality being the current available:

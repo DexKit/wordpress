@@ -1,5 +1,9 @@
 CHANGELOG
 
+## v0.1.5 - _November 8, 2021_
+
+    * Fixed issue on mobile
+
 ## v0.1.4 - _October 17, 2021_
 
     * Added Avalanche network, added affiliate
