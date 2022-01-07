@@ -1,5 +1,9 @@
 CHANGELOG
 
+## v0.1.7 - _January 7, 2021_
+
+    * Second fix issue on affiliate address fees distribution
+
 ## v0.1.6 - _January 7, 2021_
 
     * Fixed issue on affiliate address fees distribution
