@@ -1,5 +1,9 @@
 CHANGELOG
 
+## v0.1.8 - _January 16, 2021_
+
+    * Added Finish translation and optional shortcode
+
 ## v0.1.7 - _January 7, 2021_
 
     * Second fix issue on affiliate address fees distribution

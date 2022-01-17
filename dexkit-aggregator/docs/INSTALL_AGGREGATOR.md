@@ -59,12 +59,13 @@ Full shortcode options
 - default_token_address_matic - Default token on Polygon network
 - default_token_address_avax - Default token on Avalanche network
 - default_slippage - Default slippage of the aggregator, useful for tokens that need higher slippage to trade
+- buy_token_percentage - percentage between 0 and 5 %. Default is 0.3%
 
 
 
 Full Example
 
-`[dexkit_aggregator affiliate="0x5bD68B4d6f90Bcc9F3a9456791c0Db5A43df676d" height="800px" width="100%" logo="path_to_logo" logo_dark="path_to_logo" is_dark_mode="true" matic_as_default="false" bsc_as_default="false" default_token_address_eth="0x7866E48C74CbFB8183cd1a929cd9b95a7a5CB4F4" default_token_address_bsc="0x314593fa9a2fa16432913dbccc96104541d32d11" default_token_address_matic="0x4d0def42cf57d6f27cd4983042a55dce1c9f853c"  default_slippage="2" brand_color="#ff7149" brand_color_dark="#2172E5" ]`
+`[dexkit_aggregator affiliate="0x5bD68B4d6f90Bcc9F3a9456791c0Db5A43df676d" height="800px" width="100%" logo="path_to_logo" logo_dark="path_to_logo" is_dark_mode="true" matic_as_default="false" bsc_as_default="false" default_token_address_eth="0x7866E48C74CbFB8183cd1a929cd9b95a7a5CB4F4" default_token_address_bsc="0x314593fa9a2fa16432913dbccc96104541d32d11" default_token_address_matic="0x4d0def42cf57d6f27cd4983042a55dce1c9f853c"  default_slippage="2" brand_color="#ff7149" brand_color_dark="#2172E5" buy_token_percentage="0.3" ]`
 
 If you need your aggregator as full page, you can select template as NOTE: SHORTCODE ATTRIBUTES DON'T WORK ON FULL PAGE
 ![Full Page](images/install-aggregator/install-agg-11.png "Full Page")
