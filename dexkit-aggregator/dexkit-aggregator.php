@@ -6,7 +6,7 @@
  * Author URI:      https://dexkit.com
  * Text Domain:     dexkit-aggregator
  * Domain Path:     /languages
- * Version:         0.1.7
+ * Version:         0.1.8
  * @package         Dexkit-Aggregator
  */
 if ( ! defined( 'ABSPATH' ) ) {
@@ -267,7 +267,8 @@ class DexkitAGGREGATOR
 			'bsc_as_default' => '',
 			'avax_as_default' => '',
 			'is_dark_mode' => '',
-			'default_slippage' => ''
+			'default_slippage' => '',
+			'buy_token_percentage' => ''
 		], $params);
 
 		$agg = '<style>
@@ -277,7 +278,7 @@ class DexkitAGGREGATOR
 								border: 0;
 							}
 							</style>';
-		$agg .= '<iframe name="dexkit-aggregator" src="' . esc_url( AGGREGATOR_BUILD ) . 'index.php" class="dexkit-widget-iframe"></iframe>';
+		$agg .= '<iframe name="dexkit-aggregator" src="' . esc_url( AGGREGATOR_BUILD ). '" class="dexkit-widget-iframe"></iframe>';
 
 		if (
 			$localConfig->expire_date != NULL &&

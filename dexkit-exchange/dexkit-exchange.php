@@ -260,7 +260,7 @@ class DexkitEXCHANGE
 								border: 0;
 							}
 							</style>';
-		$agg .= '<iframe name="dexkit-exchange" src="' . esc_url( NFT_BUILD ) . '" class="dexkit-exchange-widget-iframe"></iframe>';
+		$agg .= '<iframe name="dexkit-exchange" src="' . esc_url( EXCHANGE_BUILD ) . '" class="dexkit-exchange-widget-iframe"></iframe>';
 
 		if (
 			$localConfig->expire_date != NULL &&
@@ -276,7 +276,7 @@ class DexkitEXCHANGE
 				echo '<div id="' . $a['selector'] . '" style="width: 100%; height: 100%;"></div>';		
 			}
 
-			//$relayData['config'] = "{\"theme\":{\"general\":{\"title\":\"MARKETPLACE\"},\"componentsTheme\":{\"background\":\"#F4F7FE\",\"backgroundERC721\":\"#F4F7FE\"}}}"; 
+			// $relayData['config'] = "{\"theme\":{\"general\":{\"title\":\"MARKETPLACE\"},\"componentsTheme\":{\"background\":\"#F4F7FE\",\"backgroundERC721\":\"#F4F7FE\"}}}"; 
 			// $localConfig->config
 			$relayData['config'] = json_decode($localConfig->config);
 			$relayData['owner'] = $localConfig->owner;
