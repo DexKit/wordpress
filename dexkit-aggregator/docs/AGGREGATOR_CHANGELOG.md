@@ -1,5 +1,9 @@
 CHANGELOG
 
+## v0.1.9 - _February 2, 2021_
+
+    * Added Fantom, bug fixes on Aggregator
+
 ## v0.1.8 - _January 16, 2021_
 
     * Added Finnish translation and optional shortcode
@@ -20,7 +24,6 @@ CHANGELOG
 
     * Added Avalanche network, added affiliate
 
-
 ## v0.1.3 - _September 28, 2021_
 
     * Fixes in plugin logic
@@ -32,8 +35,6 @@ CHANGELOG
 ## v0.1.1 - _August 2, 2021_
 
     * Added Limit Orders support on ETH network
-
-
 
 ## v0.1.0 - _July 15, 2021_
 

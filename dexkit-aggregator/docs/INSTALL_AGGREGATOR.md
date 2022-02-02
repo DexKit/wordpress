@@ -65,7 +65,7 @@ Full shortcode options
 
 Full Example
 
-`[dexkit_aggregator affiliate="0x5bD68B4d6f90Bcc9F3a9456791c0Db5A43df676d" height="800px" width="100%" logo="path_to_logo" logo_dark="path_to_logo" is_dark_mode="true" matic_as_default="false" bsc_as_default="false" default_token_address_eth="0x7866E48C74CbFB8183cd1a929cd9b95a7a5CB4F4" default_token_address_bsc="0x314593fa9a2fa16432913dbccc96104541d32d11" default_token_address_matic="0x4d0def42cf57d6f27cd4983042a55dce1c9f853c"  default_slippage="2" brand_color="#ff7149" brand_color_dark="#2172E5" buy_token_percentage="0.3" ]`
+`[dexkit_aggregator affiliate="0x5bD68B4d6f90Bcc9F3a9456791c0Db5A43df676d" height="800px" width="100%" logo="path_to_logo" logo_dark="path_to_logo" is_dark_mode="true" matic_as_default="false" bsc_as_default="false" default_token_address_eth="0x7866E48C74CbFB8183cd1a929cd9b95a7a5CB4F4" default_token_address_bsc="0x314593fa9a2fa16432913dbccc96104541d32d11" default_token_address_matic="0x4d0def42cf57d6f27cd4983042a55dce1c9f853c" default_token_address_avax="0x264c1383ea520f73dd837f915ef3a732e204a493" default_token_address_fantom="0x95dd59343a893637be1c3228060ee6afbf6f0730" default_slippage="2" brand_color="#ff7149" brand_color_dark="#2172E5" buy_token_percentage="0.3" ]`
 
 If you need your aggregator as full page, you can select template as NOTE: SHORTCODE ATTRIBUTES DON'T WORK ON FULL PAGE
 ![Full Page](images/install-aggregator/install-agg-11.png "Full Page")

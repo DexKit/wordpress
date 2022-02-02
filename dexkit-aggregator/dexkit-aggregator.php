@@ -6,7 +6,7 @@
  * Author URI:      https://dexkit.com
  * Text Domain:     dexkit-aggregator
  * Domain Path:     /languages
- * Version:         0.1.8
+ * Version:         0.1.9
  * @package         Dexkit-Aggregator
  */
 if ( ! defined( 'ABSPATH' ) ) {
@@ -19,7 +19,7 @@ add_action( 'plugins_loaded', 'dexkit_aggregator_bootstrap' );
 
 define( 'AGGREGATOR_TAG', 'dexkit_aggregator' );
 define( 'AGGREGATOR_CRON', 'cron_dexkit_aggregator' );
-define( 'AGGREGATOR_VERSION', '0.1.8' );
+define( 'AGGREGATOR_VERSION', '0.1.9' );
 define( 'AGGREGATOR_API', 'https://query.dexkit.com');
 define( 'AGGREGATOR_EXPIRE_DAYS', 7 );
 define( 'AGGREGATOR_BUILD', plugin_dir_url( __FILE__ ) . 'build/' );
@@ -258,6 +258,7 @@ class DexkitAGGREGATOR
 			'default_token_address_bsc' => '',
 			'default_token_address_matic' => '',
 			'default_token_address_avax' => '',
+			'default_token_address_fantom' => '',
 			'brand_color'=> '',
 			'brand_color_dark' => '',
 			'logo' => '',
@@ -266,6 +267,7 @@ class DexkitAGGREGATOR
 			'matic_as_default'=> '',
 			'bsc_as_default' => '',
 			'avax_as_default' => '',
+			'fantom_as_default' => '',
 			'is_dark_mode' => '',
 			'default_slippage' => '',
 			'buy_token_percentage' => ''
@@ -303,6 +305,7 @@ class DexkitAGGREGATOR
 			'default_token_address_bsc' => $a['default_token_address_bsc'],
 			'default_token_address_matic' => $a['default_token_address_matic'],
 			'default_token_address_avax' => $a['default_token_address_avax'],
+			'default_token_address_fantom' => $a['default_token_address_fantom'],
 			'brand_color' => $a['brand_color'],
 			'brand_color_dark' => $a['brand_color_dark'],
 			'logo' => $a['logo'],
@@ -311,6 +314,7 @@ class DexkitAGGREGATOR
 			'matic_as_default' => $a['matic_as_default'],
 			'bsc_as_default' => $a['bsc_as_default'],
 			'avax_as_default' => $a['avax_as_default'],
+			'fantom_as_default' => $a['fantom_as_default'],
 			'is_dark_mode' => $a['is_dark_mode'],
 			'default_slippage' => $a['default_slippage'],
 			'site_url' => esc_url( AGGREGATOR_BUILD_WITHOUT_SLASH )
