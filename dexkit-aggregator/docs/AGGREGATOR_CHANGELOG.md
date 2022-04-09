@@ -1,18 +1,22 @@
 CHANGELOG
 
-## v0.1.9 - _February 2, 2021_
+## v0.1.10 - _April 2, 2022_
+
+    * Bug fixes, add troubleshooting documentation
+
+## v0.1.9 - _February 2, 2022_
 
     * Added Fantom, bug fixes on Aggregator
 
-## v0.1.8 - _January 16, 2021_
+## v0.1.8 - _January 16, 2022_
 
     * Added Finnish translation and optional shortcode
 
-## v0.1.7 - _January 7, 2021_
+## v0.1.7 - _January 7, 2022_
 
     * Second fix issue on affiliate address fees distribution
 
-## v0.1.6 - _January 7, 2021_
+## v0.1.6 - _January 7, 2022_
 
     * Fixed issue on affiliate address fees distribution
 

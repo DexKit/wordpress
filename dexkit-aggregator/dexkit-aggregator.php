@@ -6,7 +6,7 @@
  * Author URI:      https://dexkit.com
  * Text Domain:     dexkit-aggregator
  * Domain Path:     /languages
- * Version:         0.1.9
+ * Version:         0.1.10
  * @package         Dexkit-Aggregator
  */
 if ( ! defined( 'ABSPATH' ) ) {
@@ -19,7 +19,7 @@ add_action( 'plugins_loaded', 'dexkit_aggregator_bootstrap' );
 
 define( 'AGGREGATOR_TAG', 'dexkit_aggregator' );
 define( 'AGGREGATOR_CRON', 'cron_dexkit_aggregator' );
-define( 'AGGREGATOR_VERSION', '0.1.9' );
+define( 'AGGREGATOR_VERSION', '0.1.10' );
 define( 'AGGREGATOR_API', 'https://query.dexkit.com');
 define( 'AGGREGATOR_EXPIRE_DAYS', 7 );
 define( 'AGGREGATOR_BUILD', plugin_dir_url( __FILE__ ) . 'build/' );
@@ -35,7 +35,8 @@ register_deactivation_hook( __FILE__, array( DexkitAGGREGATOR::get_instance(), '
 add_action( 'init', 'wpdocs_add_custom_shortcode' );
 add_action( AGGREGATOR_CRON , array( DexkitAGGREGATOR::get_instance(), 'fetch'));
 add_action( 'admin_menu', array( DexkitAGGREGATOR::get_instance(), 'create_plugin_settings_page' ) );
-add_action( 'wp_enqueue_scripts', array(DexkitAGGREGATOR::get_instance(), 'load_app'), 45000 );
+// It is not loading properly the script
+//add_action( 'wp_enqueue_scripts', array(DexkitAGGREGATOR::get_instance(), 'load_app'), 45000 );
  
 // register shortcodes
 function wpdocs_add_custom_shortcode() {
@@ -297,6 +298,7 @@ class DexkitAGGREGATOR
 			$relayData['slug'] = $localConfig->slug;
 			$relayData['createdAt'] = $localConfig->createdAt;		
 		}
+		wp_enqueue_script( 'setup-dexkit-agg-plugin', plugin_dir_url( __FILE__ ) . 'scripts/init.js', array(), AGGREGATOR_VERSION);
 		wp_localize_script( 'setup-dexkit-agg-plugin', 'dexkit_aggregator', array(
 			'data' => $relayData,
 			'affiliate'=> $a['affiliate'],
@@ -341,7 +343,7 @@ class DexkitAGGREGATOR
 			wp_enqueue_script( 'react-agg-plugin-' . $index, AGGREGATOR_BUILD . $js_file, array(), AGGREGATOR_VERSION, true );
 		}*/
 
-		wp_enqueue_script( 'setup-dexkit-agg-plugin', plugin_dir_url( __FILE__ ) . '/scripts/init.js', array(), AGGREGATOR_VERSION, true );
+		wp_enqueue_script( 'setup-dexkit-agg-plugin', plugin_dir_url( __FILE__ ) . 'scripts/init.js', array(), AGGREGATOR_VERSION);
   }
 
 
@@ -406,6 +408,7 @@ class DexkitAGGREGATOR
 			<p style="text-align:justify">DEXKIT is changing the game of decentralized trading. The next-generation DeFi toolkit contains a full-suite decentralized exchange (DEX) that leverages powerful 0x (ZRX) technology allowing for multiple order types including ZERO GAS FEE placement of stop and limit orders. The exchange is powered by the underlying DEXSwap aggregator which gathers information from over 14 exchanges in search of the best price and liquidity for tokens. Collectors can launch their own customizable NFT marketplace where they can exchange crypto art, in-game assets, and any other ERC721 or 1155 token. The DEXKIT dashboard is the main control room where users can monitor statistics from all over the crypto markets, customize deployed DEXKIT tools, and perform swaps within the onboard multicurrency wallet.</p>
 			<p style="text-align:justify">In order to costumize this plugin you need to use  shortcode attributes</p>
 			<p><a href="https://github.com/DexKit/wordpress/blob/main/README.md">Documentation and Installation guides</a></p>
+			<p><a href="https://github.com/DexKit/wordpress/blob/main/dexkit-aggregator/docs/TROUBLESHOOTING_AGGREGATOR.md">Plugin not working? Check common issues and solve it checking on Troubleshooting</a></p>
 			<p><a href="https://dexkit.com">https://dexkit.com</a></p>
 			<p><a href="https://t.me/dexkit">Telegram</a></p>
 
