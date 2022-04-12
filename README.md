@@ -46,6 +46,10 @@ This NFT marketplace has the follow features:
 
 - Please open an issue on this repository
 
+# Do you want to contribute to this repo?
+
+- Please check our contributing guidelines at [Contributing](Contributing.md)
+
 
 # NFT Marketplace
 
