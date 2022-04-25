@@ -1,5 +1,9 @@
 CHANGELOG
 
+## v0.1.11 - _April 25, 2022_
+
+    * Bug fixes
+
 ## v0.1.10 - _April 2, 2022_
 
     * Bug fixes, add troubleshooting documentation
